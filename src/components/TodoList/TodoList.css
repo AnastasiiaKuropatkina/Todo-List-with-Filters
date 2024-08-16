@@ -1,0 +1,32 @@
+.close {
+    color: gray;
+    text-decoration: line-through;
+}
+.MuiList-root {
+    margin: 10px auto;
+}
+.MuiList-root.list {
+    border: 1px solid hsl(215, 15%, 92%);
+    border-radius: 12px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list .css-1rki8sg-MuiListItem-root {
+    padding-right: 70px;
+}
+.list .item-input {
+    width: 100%;
+    margin-right: 16px;
+}
+.list .item-icon {
+    min-width: 56px;
+}
+.list .item-icon:hover {
+    background-color: transparent;
+}
+.list .css-1p823my-MuiListItem-root {
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
