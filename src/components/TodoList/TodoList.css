@@ -26,3 +26,42 @@
 .list .item-icon:hover {
     background-color: transparent;
 }
+.footer {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto 0;
+    background-color: rgba(0, 0, 0, 0.33);
+    border: 1px solid hsl(215, 15%, 92%);
+    border-radius: 12px;
+    margin: 10px auto;
+    padding: 16px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container {
+    padding-right: 16px;
+    padding-left: 16px;
+
+}
+.footer-done {
+    color: white;
+    font-size: 24px;
+    text-align: left;
+}
+.footer-clean {
+    color: white;
+    text-align: left;
+}
+.footer-counter {
+    border-radius: 100%;
+    background-color : #1976d2;
+    color: white;
+    padding:10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

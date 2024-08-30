@@ -17,7 +17,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
 function TodoList({todo, setTodo}) {
-    console.log('todo', todo);
     const [edit, setEdit] = useState(null);
     const [value, setValue] = useState('');
     const [filtered, setFiltered] = useState(todo);
@@ -64,11 +63,10 @@ function TodoList({todo, setTodo}) {
         setEdit(null);
     }
 
-    console.log('todo', todo);
-
     // todoFilter, is responsible for filtering the todo list
     function todoFilter(status) {
         console.log('status', status);
+        console.log('todo', todo);
         if(status === 'all') {
             setFiltered(todo);
         } else {
@@ -132,11 +130,20 @@ function TodoList({todo, setTodo}) {
   }
 </List>
 <div className="footer">
-<div className="footer-text">Total: {todo.length}</div>
-<div className="footer-text">{[...todo].filter((item) => !item.status === false).length} Tasks Left</div>
-<div className="footer-text">{todo.filter((item) => item.status === false).length} Completed</div>
-
+    <div className="footer-container">
+        <div className="footer-done">Task Done</div>
+        <div className="footer-clean">Keep it up!</div>
+    </div>
+    <div className="footer-container">
+        <div className="footer-counter">
+            <span className="footer-text">{[...todo].filter((item) => item.status === false).length}</span>
+            <span>/</span>
+            <span className="footer-text">{todo.length}</span>
+        </div>
+    </div>
 </div>
+    <span className="footer-text">{[...todo].filter((item) => item.status === true).length}</span>
+
       </>
     );
 }

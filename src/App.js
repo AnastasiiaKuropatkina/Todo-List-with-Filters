@@ -7,55 +7,44 @@ import TodoList from './components/TodoList/TodoList';
 function App() {
   const [todo, setTodo] = useState([
 { //or [] - default value
-
       id:1,
-      title: "1. Header",
-      status: "true",
-      },
-      {
+      title: "1. Input and button",
+      status: false
+    },
+    {
       id:2,
-      title: "2. Input and button",
-      status: "true",
-      },
-      {
+      title: "2. List of items (unordered list with list items)",
+      status: false
+    },
+    {
       id:3,
-      title: "3. List of items (unordered list with list items)",
-      status: "true"
-      },
-      {
+      title: "3. Filters",
+      status: false
+    },
+    {
       id:4,
-      title: "4. Filters",
-      status: "true"
+      title: "4. Pop-up for delete",
+      status: false
     },
     {
       id:5,
-      title: "5. Pop-up for delete",
-      status: "true"
+      title: "5. LocalStorage",
+      status: true
     },
     {
       id:6,
-      title: "6. LocalStorage",
-      status: "false"
+      title: "6. Empty todo list",
+      status: false
     },
     {
       id:7,
-      title: "7. Fix checkbox",
-      status: "false"
+      title: "7. Items left and completed todos",
+      status: false
     },
     {
       id:8,
-      title: "8. Empty todo list",
-      status: "false"
-    },
-    {
-      id:9,
-      title: "Items left and completed todos",
-      status: "false"
-    },
-    {
-      id:10,
-      title: "Clear all todos",
-      status: "false"
+      title: "8. Clear all todos",
+      status: true
     },
   ]);
 
