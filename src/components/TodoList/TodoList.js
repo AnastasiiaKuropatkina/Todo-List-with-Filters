@@ -17,6 +17,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
 function TodoList({todo, setTodo}) {
+    console.log('todo', todo);
     const [edit, setEdit] = useState(null);
     const [value, setValue] = useState('');
     const [filtered, setFiltered] = useState(todo);
@@ -63,6 +64,8 @@ function TodoList({todo, setTodo}) {
         setEdit(null);
     }
 
+    console.log('todo', todo);
+
     // todoFilter, is responsible for filtering the todo list
     function todoFilter(status) {
         console.log('status', status);
@@ -76,6 +79,7 @@ function TodoList({todo, setTodo}) {
 
     return (
       <>
+
       <Box
       sx={{
         display: 'flex',
@@ -103,7 +107,7 @@ function TodoList({todo, setTodo}) {
               <Checkbox
                 onChange={() => statusTodo(item.id)}
                 inputProps={{ 'aria-label': 'primary checkbox' }}
-                checked={item.status ? false: true}
+                checked={item.status === false}
               />
             </ListItemIcon>
             <ListItemText className={!item.status ? "close": ""} primary={item.title}/>
@@ -127,6 +131,12 @@ function TodoList({todo, setTodo}) {
     ))
   }
 </List>
+<div className="footer">
+<div className="footer-text">Total: {todo.length}</div>
+<div className="footer-text">{[...todo].filter((item) => !item.status === false).length} Tasks Left</div>
+<div className="footer-text">{todo.filter((item) => item.status === false).length} Completed</div>
+
+</div>
       </>
     );
 }
